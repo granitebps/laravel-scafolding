@@ -1,23 +1,27 @@
 @extends('layouts.app')
 
+@section('title', 'Dashboard')
+
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- /.col-md-6 -->
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="m-0">Featured</h5>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">Special title treatment</h6>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
+                        <p class="card-text">With supporting text below as a natural lead-in to additional
+                            content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
                 </div>
             </div>
+            <!-- /.col-md-6 -->
         </div>
-    </div>
-</div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
 @endsection
